@@ -16,6 +16,7 @@ const Todos = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["todos"],
     queryFn: getUsers,
+    staleTime: 10000,
   });
 
   if (error) {

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, memo } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { api } from "../helper/api.helper";
 
@@ -64,4 +64,4 @@ const CreateTodo = () => {
   );
 };
 
-export default CreateTodo;
+export default memo(CreateTodo);
